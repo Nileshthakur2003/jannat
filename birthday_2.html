@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <script type="text/javascript">
+        var i = 0;
+        var txt = 'Well, Here we are again its your birthday miss Jahan Aara... :) Happy Birthday, Jan-nat! On this wonderful day, I want to take a this special moment to celebrate . You bring so much joy, kindness, and love for the me and all, and today is all about recognizing the amazing person you are. As you embark on another trip around the sun, I wish you nothing but happiness, success, and countless beautiful moments. May your life be filled with laughter that warms your heart, adventures that excite your soul, and dreams that come true beyond your wildest imagination. Remember, today is a day to treat yourself, to bask in the love of those around you, and to embrace all the wonderful things that make you, YOU. So, let’s raise a toast to your health, your happiness, and your bright future. Here’s to making incredible memories, achieving great things, and living life to the fullest. You deserve all the best that life has to offer, and I’m grateful to have you in my life. Happy Birthday!. With all my love and best wishes forever';
+        var speed = 400; /* The speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                window.setTimeout(typeWriter, speed);
+            }
+        }
+
+        function startTyping(){
+            typeWriter();
+        }
+        
+        
+        
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 10px  ;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url('wallpaper_paper.jpg');
+            font-family: 'Garamond', serif;
+            color: #333;
+            text-align: center;
+            overflow: auto;
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 40px; /* Changed to px */
+            margin: 10px 0;
+        }
+        p {
+            font-size: 20px; /* Changed to px */
+            margin: 10px 0;
+        }
+        @keyframes glisten {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                             0 0 20px rgba(255, 255, 255, 0.5),
+                             0 0 30px rgba(255, 255, 255, 0.5),
+                             0 0 40px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+                             0 0 30px rgba(255, 255, 255, 1),
+                             0 0 40px rgba(255, 255, 255, 1),
+                             0 0 50px rgba(255, 255, 255, 1);
+            }
+        }
+        .candle {
+            animation: glisten 2s infinite alternate;
+        }
+        .vintage-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 2px solid #8B4513; /* Inner border for the picture */
+            border-radius: 10px;
+            max-height: 400px; /* Set a max height */
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 20px; /* Changed to px */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="startTyping()">
+<center id="container">
+   
+        <p class="candle">
+            <img alt="Candle" src="hp_tenor2.gif" style="height: 100px; width: auto;" />
+            <img alt="Birthday Wish" src="hbdd_wish.png" style="height: 150px; width: auto;" />
+            <h1 style="font-family: 'MedievalSharp', cursive;color: black;" id="name">Jannat!</h1>
+        </p>
+        <div class="vintage-frame">
+            <img alt="Person" src="person.jpeg" style="max-height: 400px; width: auto;" />
+        </div>
+        <p id="demo"></p>
+        <audio controls >
+            <source src="hbd_ins.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio> 
+    </center>
+</body>
+</html>
